@@ -7,5 +7,11 @@
   handlers:
     - name: restart httpd
       action: service name=httpd state=restarted
+    - name: copying the file
+      copy:
+        src: index.html
+        dest: /var/www/html
+     
+    
 
 
