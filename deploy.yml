@@ -3,4 +3,8 @@
   tasks:
     - name: installing httpd
       yum: name=httpd state=present
+      notify: restart httpd
+  Handlers:
+    -name: restart httpd
+     command: service httpd restart
 
