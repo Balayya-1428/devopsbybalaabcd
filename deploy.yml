@@ -2,9 +2,10 @@
   become: yes
   tasks:
     - name: installing httpd
-      yum: name=httpd state=present
+      yum: name=httpd state=absent
       notify: restart httpd
-  Handlers:
-    -name: restart httpd
-     command: service httpd restart
+  handlers:
+    - name: restart httpd
+      action: service name=httpd state=restarted
+
 
