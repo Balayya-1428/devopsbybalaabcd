@@ -1,0 +1,5 @@
+hosts: all
+become: yes
+tasks:
+  name: installing httpd
+  yum: name=httpd state=present
