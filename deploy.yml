@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: websever
   become: yes
   tasks:
     - name: installing httpd
